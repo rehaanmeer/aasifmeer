@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <style>
+        html {
+            font-size: 20px;
+            margin: 0px;
+            padding: 0px;
+            background-color: aqua;
+        }
+
+        form {
+            padding: 5rem;
+            /* background-color: aqua; */
+            height: 20vh;
+
+        }
+
+        .first input {
+            width: 50vw;
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .second input {
+            width: 50vw;
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .btn {
+            width: 90vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <div class="first"> <label for="FirstNo"> Enter first No
+                <input type="text" name="FirstNo" id="FirstNo" value="" placeholder="Enter First No">
+            </label>
+        </div>
+        <div class="second"> <label for="SecondNo"> Enter second no.
+                <input type="text" name="SecondNo" id="SecondNo" value="" placeholder="Enter Second No">
+            </label>
+        </div>
+        <!-- <div id="resultDiv">
+
+        </div> -->
+
+
+        <div class="btn">
+
+            <button class="" type="button" onclick="global()"> add</button>
+            <div id="add"></div>
+            <button class="" type="button" onclick="global()"> sub</button>
+            <div id="sub"></div>
+
+            <button class="" type="button" onclick="global()"> mul</button>
+            <div id="mul"></div>
+
+            <button class="" type="button" onclick="global()"> div</button>
+            <div id="div"></div>
+
+            <button class="" type="button" onclick="global()"> mod</button>
+            <div id="mod"></div>
+
+        </div>
+    </form>
+    <script>
+        function global() {
+            var FirstNo = parseFloat(document.getElementById("FirstNo").value);
+            var SecondNo = parseFloat(document.getElementById("SecondNo").value);
+
+            var resultDiv = document.getElementById("add");
+            resultDiv.innerHTML = "the sum of two nos is " + sum;
+            addition(FirstNo, SecondNo);
+
+            var resultDiv = document.getElementById("sub");
+            resultDiv.innerHTML = "The sub of two numbers is " + sub;
+            subtraction(FirstNo, SecondNo);
+            multiplication(FirstNo, SecondNo);
+            division(FirstNo, SecondNo);
+            modulo(FirstNo, SecondNo);
+        }
+
+        function addition(FirstNo, SecondNo) {
+
+            // var FirstNo = parseFloat(document.getElementById("FirstNo").value);
+            // var SecondNo = parseFloat(document.getElementById("SecondNo").value);
+            var sum = FirstNo + SecondNo;
+            var resultDiv = document.getElementById("add");
+            resultDiv.innerHTML = "the sum of two nos is " + sum;
+
+
+
+
+        }
+        function subtraction(FirstNo, SecondNo) {
+
+
+            var sub = FirstNo - SecondNo;
+            var resultDiv = document.getElementById("sub");
+            resultDiv.innerHTML = "The sub of two numbers is " + sub;
+
+
+        }
+        function multiplication(FirstNo, SecondNo) {
+
+
+            var mul = FirstNo * SecondNo;
+            var resultDiv = document.getElementById("mul");
+            resultDiv.innerHTML = "The multilplication of two numbers is " + mul;
+
+
+        }
+
+        function division(FirstNo, SecondNo) {
+
+            var div = FirstNo / SecondNo;
+            var resultDiv = document.getElementById("div");
+            resultDiv.innerHTML = "The division of two numbers is " + div;
+
+
+        }
+        function modulo(FirstNo, SecondNo) {
+
+            var mod = FirstNo % SecondNo;
+            var resultDiv = document.getElementById("mod");
+            resultDiv.innerHTML = "The modulo of two numbers is " + mod;
+
+
+        }
+    </script>
+</body>
+
+</html>

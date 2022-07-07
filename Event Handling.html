@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myDiv {
+            width: 90vw;
+            height: 50vh;
+            border: 2px inset grey;
+        }
+
+        button {
+            margin: 10px;
+            margin-left: 500px;
+            padding: 20px;
+            background-color: turquoise;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+        }
+
+        input {
+            padding: .5rem .8rem;
+            margin: 8px;
+            transition: all .3s linear;
+            border-radius: 20%;
+            /* border: 1px groove; */
+        }
+
+        input:focus {
+
+            border: none;
+            outline: none;
+            box-shadow: none;
+      
+        }
+            input:hover{
+                background-color: rgb(181, 222, 135);
+                border-radius: 40%;
+                color: black;
+
+            }
+
+
+        
+
+        ::placeholder {
+
+            color: rgb(58, 34, 34);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <script>
+        // let myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        // let isAvailable = myArray.includes(3);
+        // console.log(isAvailable);
+        // let resultArray = myArray.filter(isEven);
+
+
+        // function isEven(value, index, array) {
+        //     if (value % 2 == 0) {
+        //         return true;
+        //     }
+        //     else {
+        //         return false;
+        //     }
+        // }
+        // let myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        // let resultArray = myArray.filter((value) => value % 2 == 0)
+        // myArray.forEach((value, index, array) => console.log(`original array is ${value}`));
+        // console.log(`even numbers after filter are`)
+        // resultArray.forEach((value, index, array) => console.log(value));
+
+    </script> -->
+    <div id="myDiv">
+       <h1> Event Handling</h1> 
+    </div>
+    <input type="text" name="" onkeyup="keyUpFun('first')" onkeydown="keyDownFun('first')" onfocus="focusFun('first')"
+        onblur="blurFun('first')" placeholder="SearchBy  Username" id="first" value="">
+    <input type="text" name="" onkeyup="keyUpFun('second')" onkeydown="keyDownFun('second')"
+        onfocus="focusFun('second')" onblur="blurFun('second')" placeholder="SearchBy  Email" id="second" value="">
+    <input type="text" name="" onkeyup="keyUpFun('third')" onkeydown="keyDownFun('third')" onfocus="focusFun('third')"
+        onblur="blurFun('third')" placeholder="SearchBy  Address" id="third" value="">
+
+    <button type="button" onmouseout="mouseOut()" onmouseover="mouseOver()" onclick="clickHandle()"> click to
+        view</button>
+    <script>
+        // var str="this is'good'for our ";
+        let myDiv = document.getElementById("myDiv");
+        function keyUpFun(id) {
+            // alert("function keyup operated")
+            let control = document.getElementById(id);
+            control.style.backgroundColor = "#fff";
+            control.style.color = "#000";
+
+        }
+        function keyDownFun(id) {
+            // alert("function keyup operated")
+            let control = document.getElementById(id);
+            control.style.backgroundColor = "#EC4067";
+            control.style.color = "#fff";
+        }
+        function blurFun(id) {
+            let control = document.getElementById(id);
+            control.style.borderWidth = "2px";
+            control.style.borderStyle = "solid";
+            control.style.borderColor = "#E09F7D";
+            control.style.backgroundColor = "#fff";
+            control.style.color = "#000";
+        }
+        function focusFun(id) {
+            let control = document.getElementById(id);
+            control.style.backgroundColor = "#EC4067";
+            control.style.color = "#fff";
+
+        }
+        function clickHandle() {
+
+
+            myDiv.style.backgroundColor = "yellowgreen";
+        }
+        function mouseOver() {
+            myDiv.style.backgroundColor = "skyblue";
+
+        }
+        function mouseOut() {
+            myDiv.style.backgroundColor = "black";
+        }
+    </script>
+</body>
+
+</html>

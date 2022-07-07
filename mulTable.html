@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>multiplication table</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center my-5">
+        <form action="">
+            <div class="form-group mb-3">
+                <label for="firstNo" class="form-label"> Enter any Number</label>
+                <input type="number" class="form-control" id="firstNo" placeholder="Enter any number">
+            </div>
+            <div class="form-group mb-3">
+                <label for="limit" class="form-label"> Enter limit</label>
+                <input type="number" class="form-control" id="limit" placeholder="limit">
+            </div>
+
+            <input type="text" id="alerting" value="" class="form-control-plaintext text-danger"
+                style="margin-top: -10px;" disabled>
+            <div class="form-group mt-3">
+
+                <button class="btn btn-primary" type="button" onclick="mul()">click to View table</button>
+
+            </div>
+            <div>
+            <table class="table table-striped">
+                <tbody id="showTable">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+            <button class="btn btn-info mt-2 w-100" type="reset">Reset</button>
+            <div class="footer mt-5  btn-secondary p-2">
+
+                &copy; Aasif meer | All rights reserved
+
+            </div>
+        </form>
+
+
+    </div>
+    <script>
+        function mul() {
+            var firstNo = parseInt(document.getElementById('firstNo').value);
+            var limit = parseInt(document.getElementById('limit').value);
+            var resultAlert = document.getElementById('alerting');
+            for (var i = 1; i <= limit; i++){
+
+                var finalResult = firstNo * i;
+
+            // showTable = document.getElementById('showTable');
+
+            showTable.innerHTML += `<tr>
+                        <td> ${firstNo}</td>
+                        <td> x${i}</td>
+                        <td> =${finalResult}</td>
+                    </tr>`
+
+
+            resultAlert.value = ('The is the multiplication table');
+                }
+
+        }
+
+    </script>
+</body>
+
+</html>

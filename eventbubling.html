@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myDiv {
+            display: table-cell;
+            width: 400px;
+            padding: 64px;
+            border: 1px solid blue;
+            text-align: center;
+        }
+
+
+
+    body{
+
+display: grid;
+place-items: center;
+
+    }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="grandparent" class="myDiv">
+        grand parent
+        <div id="parent" class="myDiv">
+            parent
+            <div id="child" class="myDiv">
+                child
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        let grandparent = document.getElementById("grandparent");
+        let parent = document.getElementById("parent");
+        let child = document.getElementById("child");
+        // window.addEventListener("click", function (event) {
+        //     grandparent.style.backgroundColor = "blue";
+        //     // event.stopPropagation();
+        //     alert(window);
+        // },);
+        // document.addEventListener("click", function (event) {
+        //     grandparent.style.backgroundColor = "skyblue";
+        //     // event.stopPropagation();
+        //     alert(document);
+        // },);
+        grandparent.addEventListener("click", function () {
+            // grandparent.style.backgroundColor = "green";
+            this.style.backgroundColor = "green";
+            event.stopPropagation();
+            // alert(grandparent);
+            alert(this.id);
+        });
+        parent.addEventListener("click", function (event) {
+            // parent.style.backgroundColor = "yellow";
+            this.style.backgroundColor = "yellow";
+            event.stopPropagation();
+            // alert(parent);
+            alert(this.id);
+        });
+        child.addEventListener("click", function (event) {
+            // child.style.backgroundColor = "olive";
+            this.style.backgroundColor = "olive";
+            // event.stopPropagation();
+            // alert(child);
+            alert(this.id);
+        });
+    </script>
+</body>
+
+</html>

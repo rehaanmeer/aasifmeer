@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.css">
+    <script src="../bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+
+</head>
+<style>
+    * {
+        color: rgb(7, 9, 9);
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+
+    h1 {
+        border-radius: 26px;
+        font-size: 30px;
+    }
+
+    a {
+        font-size: 18px;
+        /* color:rgb(35, 175, 194) !important; */
+    }
+</style>
+
+<body>
+    <div class="container-fluid">
+        <nav>
+            <ul class="nav justify-content-end mt-5">
+                <li> <a class="nav-link" href="Animation.html">Home</a></li>
+                <li> <a class="nav-link" href="BootstrapHome.html">Signup</a></li>
+                <li> <a class="nav-link" href="Bootstraplist.html">Login</a></li>
+                <li> <a class="nav-link" href="Flex.html">ContactUs</a></li>
+                <li> <a class="nav-link" href="Components.html">AboutUs</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <div class="container mt-5">
+        <nav>
+            <ul class="nav nav-tabs nav-pills justify-content-center">
+
+                <li> <a data-bs-toggle="tab" class="nav-link active" href="#Student">Student</a> </li>
+                <li> <a data-bs-toggle="tab" class="nav-link" href="#HOD">H.O.D </a></li>
+                <li> <a data-bs-toggle="tab" class="nav-link" href="#Employee"> Employee</a></li>
+                <li> <a data-bs-toggle="tab" class="nav-link" href="#Clerk">Clerk</a></li>
+
+            </ul>
+        </nav>
+    </div>
+    <div class="tab-content">
+        <div id="Student" class="active tab-pane">
+            <div class="container">
+                <form action="">
+                    <div class="row">
+                        <h1 class="text-center mt-4 border border-info  bg-success  ">Enter Student Details </h1>
+                        <div class="col-md-6 mt-4">
+                            <div class="form-group row">
+                                <label for="name" class="form-label mb-1 col-3">Enter Name</label>
+                                <div class="col-9">
+                                    <input type="text" class="form-control form-control-label mb-3  " name="name"
+                                        id="name" placeholder="Enter Name">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="Parentage" class="form-label mb-1 col-3">Parentage</label>
+                                <div class="col-9">
+                                    <input type="text" class="form-control form-control-label mb-3 " name="parentage"
+                                        placeholder="parentage" id="Parentage">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="username" class="form-label mb-1  col-3">Enter Username</label>
+                                <div class="col-9">
+                                    <input type="text" class="form-control form-control-label mb-3" name="username"
+                                        id="username" placeholder="Enter username">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="email" class="form-label mb-1 col-3">Enter email</label>
+                                <div class="col-9">
+                                    <input type="text" class="form-control form-control-label mb-3" name="email"
+                                        placeholder="enter email" id="email">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="password" class="form-label mb-1 col-3">Enter password</label>
+                                <div class="col-9">
+                                    <input type="password" class="form-control form-control-label mb-3" name="password"
+                                        id="password" placeholder="Enter password">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="RegistrationNo" class="form-label mb-1  col-3">Enter Registration No</label>
+                                <div class="col-9">
+                                    <input type="text" class="form-control form-control-label mb-3"
+                                        name="RegistrationNo" id="RegistrationNo" placeholder="Enter RegistrationNo">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-4">
+                            <div class="form-group row">
+                                <label for="D.O.B" class="form-label mb-1 col-3">Enter D.O.B</label>
+                                <div class="col-9">
+                                    <input type="date" class="form-control form-control-label mb-3" name="dob"
+                                        placeholder="Enter D.O.B" id="D.O.B">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="ContactNo" class="form-label mb-1 col-3">Enter ContactNo</label>
+                                <div class="col-9">
+                                    <input type="tel" class="form-control form-control-label mb-3" name="ContactNo"
+                                        id="ContactNo" placeholder="Enter ContactNo">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="Address" class="form-label mb-1 col-3">Address</label>
+                                <div class="col-9">
+                                    <textarea name="Address" placeholder="Enter your address" class="form-control mb-3"
+                                        id="Address" cols="30" rows="2"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="nationality" class="mt-3 mb-1 col-3">Nationality</label>
+                                <div class="col-9">
+                                    <select name="Nationality" class="form-control mb-3" id="Nationality">
+                                        <option value="" selected>Select your country</option>
+                                        <option value="ind">india</option>
+                                        <option value="pak">pakistan</option>
+                                        <option value="chi">china</option>
+                                        <option value="usa">usa</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="gender" class="form-label mt-3 ">Gender
+                                    <!-- <div class="col-9"> -->
+                                    <input type="radio" class="form-label  mx-2" name="gender" id="male"> <label
+                                        for="male">male</label>
+                                    <input type="radio" class="form-label  mx-2" name="gender" id="female"> <label
+                                        for="female">female</label>
+                                    <input type="radio" class="form-label mx-2" name="gender" id="other"> <label
+                                        for="other">other</label>
+
+                                </label>
+                            </div>
+                            <div class="form-group ">
+                                <label class="form-label mt-4">Qualification
+                                    <input type="checkbox" checked class="form-label mx-2" name="qual" id="10th"><label
+                                        for="10th">10th<sup>th</sup></label>
+                                    <input type="checkbox" class="form-label mx-2" name="qual" id="12th"><label
+                                        for="12th">12th<sup>th</sup></label>
+                                    <input type="checkbox" class="form-label mx-2" name="qual" id="grad"><label
+                                        for="grad">grad</label>
+                                    <input type="checkbox" class="form-label mx-2" name="qual" id="PG"><label
+                                        for="PG">PG</label>
+                                    <input type="checkbox" class="form-label mx-2" name="qual" id="Diploma"><label
+                                        for="Diploma">Diploma</label>
+                                </label>
+                            </div>
+
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8 offset-4  mt-3 ">
+                                <button type="submit" class="mb-2 btn btn-success w-50"> Create Student</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-md-12  text-center fw-light ">
+                        <hr class="my-2">
+                        <small>&copy Aasif Meer | All Rights Reserved</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="HOD" class="tab-pane">
+            <div class="container">
+                <form action="">
+                    <div class="row">
+                        <h1 class="text-center mt-4 border border-info  bg-success">Enter Details </h1>
+                        <div class="col-md-6 mt-4">
+                            <div class="form-group row">
+                                <label for="name" class="form-label mb-1 col-3">Enter Name</label>
+                                <div class="col-9">
+                                    <input type="text" class="form-control form-control-label mb-3  " name="name"
+                                        id="name" placeholder="Enter Name">
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+                                <label for="username" class="form-label mb-1  col-3">Enter Username</label>
+                                <div class="col-9">
+                                    <input type="text" class="form-control form-control-label mb-3" name="username"
+                                        id="username" placeholder="Enter username">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="email" class="form-label mb-1 col-3">Enter email</label>
+                                <div class="col-9">
+                                    <input type="text" class="form-control form-control-label mb-3" name="email"
+                                        placeholder="enter email" id="email">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="password" class="form-label mb-1 col-3">Enter password</label>
+                                <div class="col-9">
+                                    <input type="password" class="form-control form-control-label mb-3" name="password"
+                                        id="password" placeholder="Enter password">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="password" class="form-label mb-1 col-3">Confirm password</label>
+                                <div class="col-9">
+                                    <input type="password" class="form-control form-control-label mb-3" name="password"
+                                        id="password" placeholder="Confirm password">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="EmpCode" class="form-label mt-2 col-3">Enter EmpCode</label>
+                            <div class="col-4">
+                                <input type="text" class="form-control form-control-label  mb-3" name="EmpCode"
+                                    placeholder="enter code" id="EmpCode">
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label for="gender" class="form-label mt-3 ">Gender
+                                <!-- <div class="col-9"> -->
+                                <input type="radio" class="form-label  mx-2" name="gender" id="male"> <label
+                                    for="male">male</label>
+                                <input type="radio" class="form-label  mx-2" name="gender" id="female"> <label
+                                    for="female">female</label>
+                                <input type="radio" class="form-label mx-2" name="gender" id="other"> <label
+                                    for="other">other</label>
+
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 offset-3  mt-3 ">
+                            <button type="submit" class="mb-2 btn btn-success w-50"> Create HOD</button>
+                        </div>
+                    </div>
+            </div>
+            </form>
+            <div class="row">
+                <div class="col-md-12  text-center fw-light ">
+                    <hr class="my-2">
+                    <small>&copy Aasif Meer | All Rights Reserved</small>
+                </div>
+            </div>
+        </div>
+        <div id="Employee" class="tab-pane">
+            <div class="container">
+                <form action="">
+                    <div class="row">
+                        <h1 class="text-center mt-4 border border-info  bg-success  ">Enter Employee Details </h1>
+                        <div class="col-md-6 mt-4">
+                            <div class="form-group row">
+                                <label for="name" class="form-label mb-1 col-3">Enter Name</label>
+                                <div class="col-9">
+                                    <input type="text" class="form-control form-control-label mb-3  " name="name"
+                                        id="name" placeholder="Enter Name">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="username" class="form-label mb-1  col-3">Enter Username</label>
+                                <div class="col-9">
+                                    <input type="text" class="form-control form-control-label mb-3" name="username"
+                                        id="username" placeholder="Enter username">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="email" class="form-label mb-1 col-3">Enter email</label>
+                                <div class="col-9">
+                                    <input type="email" class="form-control form-control-label mb-3" name="email"
+                                        placeholder="enter email" id="email">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="EmpCode" class="form-label mb-1 col-3">Enter EmpCode</label>
+                                <div class="col-9">
+                                    <input type="text" class="form-control form-control-label mb-3" name="EmpCode"
+                                        placeholder="enter code" id="EmpCode">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="password" class="form-label mb-1 col-3">Enter password</label>
+                                <div class="col-9">
+                                    <input type="password" class="form-control form-control-label mb-3" name="password"
+                                        id="password" placeholder="Enter password">
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-md-6 mt-4">
+
+                            <div class="form-group row">
+                                <label for="ContactNo" class="form-label mb-1 col-3">Enter ContactNo</label>
+                                <div class="col-9">
+                                    <input type="tel" class="form-control form-control-label mb-3" name="ContactNo"
+                                        id="ContactNo" placeholder="Enter ContactNo">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="Address" class="form-label mb-1 col-3">Address</label>
+                                <div class="col-9">
+                                    <textarea name="Address" placeholder="Enter your address" class="form-control mb-3"
+                                        id="Address" cols="30" rows="2"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="nationality" class="mt-3 mb-1 col-3">Nationality</label>
+                                <div class="col-9">
+                                    <select name="Nationality" class="form-control mb-3" id="Nationality">
+                                        <option value="" selected>Select your country</option>
+                                        <option value="ind">india</option>
+                                        <option value="pak">pakistan</option>
+                                        <option value="chi">china</option>
+                                        <option value="usa">usa</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="gender" class="form-label mt-3 ">Gender
+                                    <!-- <div class="col-9"> -->
+                                    <input type="radio" class="form-label  mx-2" name="gender" id="male"> <label
+                                        for="male">male</label>
+                                    <input type="radio" class="form-label  mx-2" name="gender" id="female"> <label
+                                        for="female">female</label>
+                                    <input type="radio" class="form-label mx-2" name="gender" id="other"> <label
+                                        for="other">other</label>
+
+                                </label>
+                            </div>
+                            <div class="form-group ">
+                                <label class="form-label mt-4">Qualification
+                                    <input type="checkbox" checked class="form-label mx-2" name="qual" id="10th"><label
+                                        for="10th">10th<sup>th</sup></label>
+                                    <input type="checkbox" class="form-label mx-2" name="qual" id="12th"><label
+                                        for="12th">12th<sup>th</sup></label>
+                                    <input type="checkbox" class="form-label mx-2" name="qual" id="grad"><label
+                                        for="grad">grad</label>
+                                    <input type="checkbox" class="form-label mx-2" name="qual" id="PG"><label
+                                        for="PG">PG</label>
+                                    <input type="checkbox" class="form-label mx-2" name="qual" id="Diploma"><label
+                                        for="Diploma">Diploma</label>
+                                </label>
+                            </div>
+
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8 offset-4  mt-3 ">
+                                <button type="submit" class="mb-2 btn btn-success w-50"> Create Employee</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-md-12  text-center fw-light ">
+                        <hr class="my-2">
+                        <small>&copy Aasif Meer | All Rights Reserved</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Clerk" class="tab-pane">
+            <div class="container">
+                <form action="">
+                    <div class="row">
+                        <h1 class="text-center mt-4 border border-info  bg-success  ">Enter Details </h1>
+                        <div class="col-md-6 mt-4">
+                            <div class="form-group row">
+                                <label for="name" class="form-label mb-1 col-3">Enter Name</label>
+                                <div class="col-9">
+                                    <input type="text" class="form-control form-control-label mb-3  " name="name"
+                                        id="name" placeholder="Enter Name">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="username" class="form-label mb-1  col-3">Enter Username</label>
+                                <div class="col-9">
+                                    <input type="text" class="form-control form-control-label mb-3" name="username"
+                                        id="username" placeholder="Enter username">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="email" class="form-label mb-1 col-3">Enter email</label>
+                                <div class="col-9">
+                                    <input type="email" class="form-control form-control-label mb-3" name="email"
+                                        placeholder="enter email" id="email">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="EmpCode" class="form-label mb-1 col-3">Enter EmpCode</label>
+                                <div class="col-9">
+                                    <input type="text" class="form-control form-control-label mb-3" name="EmpCode"
+                                        placeholder="enter code" id="EmpCode">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="password" class="form-label mb-1 col-3">Enter password</label>
+                                <div class="col-9">
+                                    <input type="password" class="form-control form-control-label mb-3" name="password"
+                                        id="password" placeholder="Enter password">
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-md-6 mt-4">
+
+                            <div class="form-group row">
+                                <label for="ContactNo" class="form-label mb-1 col-3">Enter ContactNo</label>
+                                <div class="col-9">
+                                    <input type="tel" class="form-control form-control-label mb-3" name="ContactNo"
+                                        id="ContactNo" placeholder="Enter ContactNo">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="Address" class="form-label mb-1 col-3">Address</label>
+                                <div class="col-9">
+                                    <textarea name="Address" placeholder="Enter your address" class="form-control mb-3"
+                                        id="Address" cols="30" rows="2"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group ">
+                                <label for="gender" class="form-label mt-3 ">Gender
+                                    <!-- <div class="col-9"> -->
+                                    <input type="radio" class="form-label  mx-2" name="gender" id="male"> <label
+                                        for="male">male</label>
+                                    <input type="radio" class="form-label  mx-2" name="gender" id="female"> <label
+                                        for="female">female</label>
+                                    <input type="radio" class="form-label mx-2" name="gender" id="other"> <label
+                                        for="other">other</label>
+
+                                </label>
+                            </div>
+
+
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8 offset-4  mt-3 ">
+                                <button type="submit" class="mb-2 btn btn-success w-50"> Create </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-md-12  text-center fw-light ">
+                        <hr class="my-2">
+                        <small>&copy Aasif Meer | All Rights Reserved</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

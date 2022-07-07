@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #resultDiv {
+            width: 50vw;
+            height: 20vh;
+            border: 1px solid black;
+            margin: 20px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" id="myForm" class="myForm" data-college="logichub" data-address="baghat"
+            data-contact-no="9999999">
+            <input type="text" name="userName" id="userName" value="" placeholder="">
+            <input type="text" name="email" id="email" value="" placeholder="">
+            <input type="password" name="password" id="password" value="" placeholder="">
+            <button type="submit">submit</button>
+            <div class="resultDiv" id="resultDiv">
+
+            </div>
+        </form>
+    </div>
+    <script>
+        const myForm = document.getElementById("myForm");
+
+        myForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            console.log(`the class of form is ${this.className}`);
+            console.log(`the class of form is ${event.target.className}`);
+
+            let userName = document.getElementById("userName");
+            let email = document.getElementById("email");
+            let password = document.getElementById("password");
+            let resultDiv = document.getElementById("resultDiv");
+            password.addEventListener("click", function (event) {
+                console.log(event.target.id);
+                console.log(this.password.value);
+                   console.log(this.password);
+
+                resultDiv.innerHTML+=`id of password box is ${event.target.id}`;
+            });
+
+
+            console.log(this.id);
+
+            console.log(this.dataset.college);
+            console.log(this.dataset.address);
+            console.log(this.dataset.contactNo);
+
+        });
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

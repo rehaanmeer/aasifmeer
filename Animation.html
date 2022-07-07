@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* p:first-child {
+            border: 2px solid rgb(42, 42, 136);
+        }
+
+        p:last-child {
+            border: 2px solid rgb(35, 158, 31);
+        } */
+        /* p:first-of-type{
+            border: 3px groove grey;
+
+        } */
+        /* p:last-of-type{
+            border: 2px solid blue;
+        } */
+        /* div:empty{
+            border: 6px solid rgb(11, 38, 189);
+
+        }
+        p:only-child{
+            background-color: aqua;
+        }
+        p:only-of-type{
+            background-color: rgb(172, 35, 35);
+
+        } */
+        /* p:not(.para){
+                background-color: green;
+            } */
+        /* p:not(div >p){
+            background-color: aqua;
+        } */
+        /* p::first-line {
+            background-color: olive;
+        } */
+        /* p::first-letter{
+            color: rgb(218, 26, 67);
+            font-size: 50px;
+        } */
+        /* p::selection{
+            background-color: orchid;
+        } */
+        /* p::before{
+            content: "zjxsdjcsd";
+            width: 100px;
+            height: 30px;
+            position: absolute;
+            background-color: rgb(134, 165, 62);
+        }
+        p::after{
+            content: "";
+            width: 100px;
+            height: 30px;
+            position: absolute;
+            background-color: aquamarine;
+        } */
+
+
+        /* li:first-child {
+            border: 2px solid rgb(42, 42, 136);
+        }
+
+        li:last-child {
+            border: 2px solid rgb(35, 158, 31);
+        } */
+        /* tr:nth-child(odd){
+            background-color: yellowgreen;
+        }
+        tr:nth-child(2n){
+            background-color: aqua;
+        }
+        tr:nth-child(2n+1){
+            background-color: brown;
+        }
+        tr:nth-child(1){ 
+            background-color:blue;
+            
+        }
+        tr:nth-last-child(1){
+            border: 0ch;
+
+        } */
+        /* input:focus{
+            background-color: hotpink;
+        } */
+        /* input:required{
+    background-color: burlywood;
+}
+a:visited{
+    background-color: aqua;
+    color: aqua;
+} */
+html {
+            font-size: 20px;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0;
+        }
+        img{
+    width: 40vw;
+    height: 40vh;
+    transition-property: all;
+    transition-duration: 5s;
+    transition-timing-function: linear;
+   /* transform:perspective(20px); */
+        }
+img:hover{
+    width: 20%;
+    transform: scale(0.7) rotate(360deg) skew(20deg) ;
+    border-radius: 40%;
+    
+}
+      
+
+        .road {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .car {
+            position: absolute;
+            top: 300px;
+            /* left: 0px; */
+            /* right: 0; */
+            mix-blend-mode:multiply;
+            height: 70vh;
+            /* width: 30vw;  */
+            animation-name: car;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes car {
+            from {
+                right: -25rem;
+            }
+
+            to {
+                right: 50rem;
+            }
+        }
+
+        div {
+            /* background-color: aqua; */
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <img class="road" src="images/road.jfif" alt="">
+    <div>
+        <img class="car" src="images/car.gif" alt="">
+        <img class="car" src="images/car.gif" alt="">
+        <img class="car" src="images/car.gif" alt="">
+        <img class="car" src="images/car.gif" alt="">
+    </div>
+    <img src="images/pexels-jaime-reimer-2662116.jpg" alt="">
+    <!-- <div>
+        <form>
+        <input type="text" name="sjksdjc" id="">
+        <input type="text" name="" id="" required> 
+       <textarea name="" id="" cols="30" rows="10"></textarea>
+    gender<input type="radio" name="gender" id="" value="gender">
+    
+        <button type="submit">create</button>
+
+    </form>
+    <a href="https://google.com" target="_blank">google </a>
+    </div>
+   
+    <div>
+        <p>Lorem, ipsum dolor.</p>
+
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit amet.dklkddkdd</p>
+        <h2>jdksjfksj</h2>
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, autem! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Facere, non fuga atque pariatur quos voluptatem! Vel maiores similique magni! Aspernatur
+            ea, voluptates placeat cupiditate minus velit unde est, nemo ullam quis impedit cumque tenetur! Laborum
+            minima labore corporis amet, molestias, nulla hic consequatur officiis id quia dolore optio vel obcaecati!
+        </p>
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <ul>
+            <li>acd</li>
+            <li>jhvjdjd</li>
+            <li>djvdfjjdfsjsvd</li>
+        </ul>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
+
+</body>
+
+</html>

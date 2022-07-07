@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shift</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <script>
+
+
+        let items = [];
+        console.log(`Total elements before initialization are ${items.length}`);
+
+        items.unshift(10);
+        items.unshift(20);
+        items.unshift(30);
+        items.unshift(40);
+        items.unshift(50);
+        // items.push(10);
+        // items.push(20);
+        // items.push(30);
+        // items.push(40);
+        // items.push(50);
+
+        console.log(`Total elements inserted are ${items}`);
+
+        let deleteNum = items.shift();
+        console.log(`The value deleted is ${deleteNum}`)
+
+        console.log(`Total no. of values after deletion are ${items.length}`);
+        console.log(`Elements after deletion are ${items}`);
+
+    </script>
+</body>
+
+</html>

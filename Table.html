@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+</head>
+
+<body>
+    <div>
+        <label for="">Enter no.
+            <input type="number" name="" id="fno">
+        </label>
+    </div>
+    <div>
+        <label for="">Enter range.
+            <input type="number" name="" id="range">
+        </label>
+    </div>
+    <button type="button" onclick="showTable()">show table</button>
+   
+    <script>
+        function showTable() {
+            var fno = parseInt(document.getElementById("fno").value);
+            var range = parseInt(document.getElementById('range').value);
+            for (let i = 1; i <= range; i++) {
+                var result = i * fno;
+                console.log(fno + " x " + i + " = " + result);
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

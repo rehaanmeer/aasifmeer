@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        .mydiv {
+            width: 90vw;
+            height: 50vh;
+            border: 2px solid grey;
+            margin-left: 50px;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            padding: 50px;
+            transition: all .4s ease;
+        }
+
+        input {
+            margin: 20px;
+        }
+
+        #btn {
+            margin-left: 50px;
+            width: 120px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" name="" id="txt1" value="" placeholder="Sarch By UserName">
+    <div class="mydiv" id="mydiv">
+
+        Event Handling
+
+    </div>
+
+    <button id="btn">Create</button>
+    <script>
+        let mydiv = document.getElementById("mydiv");
+        let btn = document.getElementById("btn");
+        let txt1 = document.getElementById("txt1");
+
+        mydiv.onmouseout = () => {
+            mydiv.style.backgroundColor = "yellowgreen";
+            mydiv.style.borderWidth = "5px";
+            mydiv.style.borderStyle = "solid";
+            mydiv.style.borderColor = "yellow";
+            mydiv.style.width = "70vw";
+            mydiv.style.height = "50vh";
+            mydiv.style.color = "voilet";
+            mydiv.style.borderRadius = "40px";
+        }
+        mydiv.onmouseover = () => {
+            mydiv.style.backgroundColor = "yellowgreen";
+            mydiv.style.borderWidth = "5px";
+            mydiv.style.borderStyle = "solid";
+            mydiv.style.borderColor = "yellow";
+            mydiv.style.width = "50vw";
+            mydiv.style.height = "40vh";
+            mydiv.style.color = "green";
+            mydiv.style.borderRadius = "80px";
+        }
+
+        mydiv.onclick = () => {
+            mydiv.style.backgroundColor = "wheat";
+            mydiv.style.borderWidth = "5px";
+            mydiv.style.borderStyle = "solid";
+            mydiv.style.borderColor = "blue";
+            mydiv.style.width = "40vw";
+            mydiv.style.height = "20vh";
+            mydiv.style.color = "blue";
+            mydiv.style.borderRadius = "90px";
+
+
+        }
+
+
+        txt1.onfocus = () => {
+            txt1.style.backgroundColor = "wheat";
+            txt1.style.borderWidth = "5px";
+            txt1.style.borderStyle = "solid";
+            txt1.style.borderColor = "blue";
+            txt1.style.borderRadius = "20px";
+
+
+        }
+
+        txt1.onkeyup = () => {
+            txt1.style.backgroundColor = "yellow";
+            txt1.style.borderWidth = "7px";
+            txt1.style.borderStyle = "solid";
+            txt1.style.borderRadius = "30px";
+
+        }
+        txt1.onblur = () => {
+            txt1.style.backgroundColor = "red";
+            txt1.style.borderWidth = "8px";
+            txt1.style.borderStyle = "groove";
+            txt1.style.borderColor = "black";
+            txt1.style.borderRadius = "50px";
+
+        }
+
+        btn.onclick = () => {
+            btn.style.backgroundColor = "wheat";
+            btn.style.borderWidth = "5px";
+            btn.style.borderStyle = "solid";
+            btn.style.borderColor = "blue";
+            btn.style.borderRadius = "20px";
+        }
+        btn.onfocus = () => {
+            btn.style.backgroundColor = "red";
+            btn.style.borderWidth = "5px";
+            btn.style.borderStyle = "inset";
+            btn.style.borderColor = "grey";
+            btn.style.borderRadius = "20px";
+        }
+        btn.onmouseover = () => {
+            btn.style.backgroundColor = "green";
+            btn.style.borderWidth = "5px";
+            btn.style.borderStyle = "groove";
+            btn.style.borderColor = "yellow";
+            btn.style.borderRadius = "20px";
+        }
+        btn.onmouseout = () => {
+            btn.style.backgroundColor = "yellowgreen";
+            btn.style.borderWidth = "5px";
+            btn.style.borderStyle = "solid";
+            btn.style.borderColor = "yellow";
+            btn.style.borderRadius = "20px";
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

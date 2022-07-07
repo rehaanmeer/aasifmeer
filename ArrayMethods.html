@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let employeeSalary = [10000, 20000, 30000, 40000, 50000, 60000, 200, 100, 500, 80000];
+
+        // map function starts fvrom here
+        let newArray = employeeSalary.map((value, index, array) => {
+            return `Your salary is incremented from ${value} to ${value + 2000}`;
+
+        });
+        newArray.forEach((value) => console.log(value));
+
+        // reduce function starts from here
+        let totalSalary = employeeSalary.reduce((preval, currVal) => preval = preval + currVal);
+        console.log(`total salry to be given is ${totalSalary}`);
+
+        // some method starts from here
+        let someArray = employeeSalary.some((value) => value < 500)
+        console.log(someArray);
+        let everyArray = employeeSalary.every((value) => value < 500)
+        console.log(everyArray);
+
+
+    </script>
+</body>
+
+</html>

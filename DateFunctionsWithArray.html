@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body>
+<div class="container pt-4">
+    <div class="col-md-6">
+        <div class="h-100 p-5 text-white bg-dark rounded-3 mt-5 ms-5">
+          <h2 class="date"></h2>
+        </div>
+      </div>
+</div>
+    <script>
+        const newDate = new Date();
+        let year = newDate.getFullYear();
+        let month = getMonthName(newDate.getMonth());
+        let date = newDate.getDate();
+        let day = getDayName(newDate.getDay());
+
+        let hours = newDate.getHours();
+        let minutes = newDate.getMinutes();
+        let seconds = newDate.getSeconds();
+
+        document.querySelector('.date').innerText = `${date}th of ${month} ${day} ${year} ${hours}:${minutes}:${seconds} PM`;
+        // console.log(`${date}th of ${month} ${day} ${year} ${hours}:${minutes}:${seconds} PM`);
+
+        function getMonthName(monthIndex) {
+
+            let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'Obtober', 'November', 'December'];
+            return months[monthIndex];
+
+        }
+        function getDayName(dayIndex) {
+
+            let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            return days[dayIndex];
+
+        }
+    </script>

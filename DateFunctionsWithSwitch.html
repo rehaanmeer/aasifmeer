@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const newDate = new Date();
+        let year = newDate.getFullYear();
+        let month = getMonthName();
+        let date = newDate.getDate();
+        let day = getDayName();
+
+        let hours = newDate.getHours();
+        let minutes = newDate.getMinutes();
+        let seconds = newDate.getSeconds();
+
+        console.log(` date is ${date}/${day}/${month}/${year}  & time is   ${hours}:${minutes}:${seconds}`);
+
+        function getMonthName() {
+            let month = newDate.getMonth();
+
+            switch (month) {
+                case 0:
+                    return "January"
+                    break;
+                case 1:
+                    return "February"
+                    break;
+                case 2:
+                    return "March"
+                    break;
+                case 3:
+                    return "April"
+                    break;
+                case 4:
+                    return "May"
+                    break;
+                case 5:
+                    return "June"
+                    break;
+                case 6:
+                    return "July"
+                    break;
+                case 7:
+                    return "August"
+                    break;
+                case 8:
+                    return "September"
+                    break;
+                case 9:
+                    return "October"
+                    break;
+                case 10:
+                    return "November"
+                    break;
+                case 11:
+                    return "December"
+                    break;
+            }
+
+        }
+
+        function getDayName() {
+            let day = newDate.getDay();
+
+            switch (day) {
+                case 0:
+                    return "Sunday"
+                    break;
+                case 1:
+                    return "Monday"
+                    break;
+                case 2:
+                    return "Tuesday"
+                    break;
+                case 3:
+                    return "Wednesday"
+                    break;
+                case 4:
+                    return "Thursday"
+                    break;
+                case 5:
+                    return "Friday"
+                    break;
+                case 6:
+                    return "Saturday"
+                    break;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

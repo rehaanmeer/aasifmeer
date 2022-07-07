@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #sourceDiv {
+            width: 30vw;
+            height: 20vh;
+            border: 2px solid blue;
+            margin: 40px;
+
+
+        }
+    </style>
+
+</head>
+
+<body id="contextmenu">
+    <div class="container">
+        <a href="https://google.com" target="_blank" id="myLink">Google</a>
+        <form action="" id="form">
+            <div>
+                <label for="FirstName">FirstName</label>
+                <input type="text" name="first" id="FirstName">
+            </div>
+            <div>
+                <label for="LastName">LastName</label>
+                <input type="text" name="second" id="LastName">
+            </div>
+            <select name="country" id="ddlCountry">
+                <option value="pak">pakistan</option>
+                <option value="iran">iran</option>
+                <option value="iraq">iraq</option>
+            </select>
+            <div>
+                <button id="btnCreate" type="submit">Create</button>
+            </div>
+            <div id="resultDiv"></div>
+            <div id="sourceDiv"></div>
+        </form>
+    </div>
+    <script>
+        const resultDiv = document.getElementById("resultDiv");
+        const sourceDiv = document.getElementById("sourceDiv");
+        const FirstName = document.getElementById("FirstName");
+        FirstName.addEventListener("change", function (event) {
+            console.log(`id is ${event.target.id}`);
+
+        });
+        const country = document.getElementById("ddlCountry");
+        country.addEventListener("click", function (event) {
+            console.log(`id of this dropdown is ${event.target.id}`);
+            console.log(`value of this dropdown is ${event.target.value}`);
+        })
+
+        sourceDiv.addEventListener("dblclick", function (event) {
+            this.style.backgroundColor = "yellow";
+        })
+        document.body.addEventListener("contextmenu", function (event) {
+            event.preventDefault();
+        });
+        document.getElementById("myLink").addEventListener("click", function (event) {
+            event.preventDefault();
+        });
+    </script>
+</body>
+
+</html>

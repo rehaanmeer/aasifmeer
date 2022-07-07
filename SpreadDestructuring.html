@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
+   
+        <style>
+            #resultDiv{
+                width: 50%;
+                height: 70%;
+                border: 5px solid green;
+                background-color: skyblue;
+                box-sizing: border-box;
+                box-shadow: 5px 5px inset blue;
+                padding: 20px;
+                
+
+
+            }
+        </style>
+</head>
+
+<body>
+
+
+    <div id="resultDiv">
+
+    </div>
+
+    <script>
+
+        //   Array Destructurig
+
+        let students = ["asif", 45, 101, "male", ["Ab Rashid", 99090999999, "rajpora"]];
+
+
+        let [fullName, rollNo, id, gender, [parentage, phNo, address]] = students;
+
+        console.log(`${fullName},${rollNo},${id},${gender},${parentage},${phNo},${address},`);
+
+        resultDiv.innerHTML += `<h1>Array Destructuring</h1>${fullName},${rollNo},${id},${gender},${parentage},${phNo},${address},`;
+
+
+        // Object Destructuring
+
+        let obj = {
+
+            name: "asif",
+            sid: 101,
+
+            personal: {
+
+                lastName: "something",
+                contact: 9487747747,
+                date: new Date().toDateString(),
+                time: new Date().toTimeString()
+
+            }
+        }
+
+        let { name, sid, personal: { lastName, contact, date, time } } = obj;
+
+        console.log(`${name},${sid},${lastName},${contact},${date},${time}`);
+
+        resultDiv.innerHTML += `<h1>Object destructuring</h1>${name},${sid},${lastName},${contact},${date},${time}`;
+        
+
+
+        //  Spread operator
+
+        let array1 = [10, 20, 30, 40];
+
+        let array2 = [50, 60, 70, 80];
+
+        let resultArray = ["asif", 1000, ...array1, "saheem", 2000, ...array2, "faisal", 56, "last"];
+
+        console.log(...resultArray);
+        console.log(resultArray);
+
+        resultDiv.innerHTML += `<h1> Spread Opeartor</h1> ${resultArray}`;
+
+
+
+
+    </script>
+
+    <!-- Bootstrap JavaScript Libraries -->
+
+</body>
+
+</html>

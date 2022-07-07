@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myDiv{
+            width: 90vw;
+            height: 50vh;
+            border: 2px inset grey;
+        }
+        button{
+            margin: 10px;
+            margin-left: 500px;
+            padding: 20px;
+            background-color:turquoise;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myDiv">
+        Event Handling
+    </div>
+    <button type="button" onmouseout="mouseOut()" onmouseover="mouseOver()"
+        onclick="clickHandle()"> click to view</button>
+        <script>
+            let myDiv = document.getElementById("myDiv");
+            function clickHandle() {
+                myDiv.style.backgroundColor ="yellowgreen";
+            }
+            function mouseOver() {
+                myDiv.style.backgroundColor ="skyblue";
+            }
+            function mouseOut() {
+                myDiv.style.backgroundColor ="black";
+            }
+        </script>
+</body>
+
+
+</html>

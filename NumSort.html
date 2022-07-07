@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=scr, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const sortArray = [1, 11, 22, 33, 44, 55, 100, 90, 80, 70, 60, 50];
+        document.writeln(`the elements before sort is ${sortArray}`);
+
+
+        sortArray.sort(compareFunc);
+        function compareFunc(a, b) {
+            return a - b;
+        }
+        document.writeln(` <br> the sorted array is ${sortArray}`);
+
+        // sortArray.sort((a, b) => a - b);
+        // document.writeln(` <br> the sorted array is ${sortArray}`);
+
+
+    </script>
+</body>
+
+</html>

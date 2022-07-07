@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.logo{
+    width: 80px;
+    /* height: 140px; */
+    cursor: pointer;
+    border-radius: 20%;
+    margin-top: 10px;
+margin-left: -140px;
+transition: all .7s linear ;
+}
+.menu>ul{
+    display: flex;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.301);
+    background-color:#00545dc7;
+    border-radius: 20px;
+    width:70vw;
+    height: 10vh;
+    align-items: center;
+
+}
+.menu>ul>li{
+   list-style: none;
+   margin-left: 70px; 
+   font-size: 20px;
+   border-radius: 20px;
+   padding: 10px;
+  
+}
+.menu>ul>li>a{
+ text-decoration: none;
+ text-transform: uppercase;
+ color:#fff;
+ /* border: 1px solid black; */
+ /* box-shadow: 0px 0px 10px yellow; */
+ border-radius: 10px;
+ transition: all .4s linear;
+ padding: 5px 3px;
+ 
+}
+i:first-child{
+    font-size: 15px;
+    margin-right: 6px;
+    color: #cd000e;
+}
+i:last-child{
+    font-size: 15px;
+    margin-left: 6px;
+    color: #cd000e;
+}
+.navbar{
+    width: 85%;
+    height: 15%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+.login-signup>button{
+    position: relative;
+    left: 900px;
+    font-size: 20px;
+}
+button{
+    margin-top: 10px;
+color: red;
+padding: 10px 25px;
+background: transparent;
+border: 1px solid #fff;
+border-radius: 20px;
+outline: none;
+cursor: pointer; 
+transition:all .7s;
+}
+h4{
+    color: rgb(77, 216, 34);
+   
+}
+.content{
+    color:aliceblue;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+h1{
+    font-size: 80px;
+    margin: 10px o 30px;
+    line-height: 80px;
+}
+.sidebar{
+    width: 80px;
+    height: 100vh;
+    background: linear-gradient(#00545d, #000729);
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+.menuline{
+    display:block;
+    width: 35px;
+    margin:40px auto 0;
+    cursor: pointer;
+
+}
+.socials img, .links img{
+    width: 40px;
+    margin:5px auto;
+    cursor: pointer;
+    /* transition: all .5s ease-in; */
+}
+.socials{
+    width: 50px;
+    text-align: center;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+}
+.links{
+    width: 50px;
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+}
+.bubbles img{
+    width: 70px;
+    animation-name: bubble;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.bubbles{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom:-70px;
+}
+@keyframes bubble{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    25%{
+    
+        opacity: 1;
+    }
+    50%{
+        
+        opacity: 1;
+    }
+    75%{
+       
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+.bubbles img:nth-child(1){
+    animation-delay: 2s;
+    /* width: 25px; */
+}
+.bubbles img:nth-child(2){
+    animation-delay: 1s;
+}
+.bubbles img:nth-child(3){
+    animation-delay: 3s;
+    /* width: 25px; */
+}
+.bubbles img:nth-child(4){
+    animation-delay: 4.5s;
+}
+.bubbles img:nth-child(5){
+    animation-delay: 3s;
+    /* width: 25px; */
+}
+.bubbles img:nth-child(6){
+    animation-delay: 6s;
+    /* width: 20px; */
+}
+.bubbles img:nth-child(7){
+    animation-delay: 2s;
+    /* width: 35px; */
+}
+button:hover{
+    color:white;
+    /* background-color: rgb(158, 44, 44); */
+    background-color: #cd000e;
+    border-color: #cd000e;
+    font-size: 25px;
+}
+.logo:hover{
+    transform: rotate(360deg) scale(1) skew(20deg);
+    width: 100px;
+
+}
+.menu>ul:hover{
+    /* background-color: rgb(88, 97, 39); */
+    /* background: transparent; */
+    /* mix-blend-mode:multiply; */
+}
+.menu>ul>li>a:hover{
+    color:rgb(190, 140, 140);
+    /* background-color:rgb(87, 59, 59); */
+    font-size: 23px;
+    /* transform: scale(1); */
+    border-color: red;
+    border: 2px solid #cd000e;
+    background-color:#0c2d3157;
+    
+}
+.socials:hover{
+    background-color: rgb(6, 7, 7);
+    /* color: red; */
+}
+.socials>img{
+    transition:all .7s linear;
+}
+.socials img:hover{
+    transform:rotate(360deg) skew(20deg) ;
+}
+.links>img{
+    transition: all .7s linear;
+}
+.links img:hover{
+   transform: rotate(360deg) skew(20deg);
+
+}

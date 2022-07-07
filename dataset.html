@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>datasets in javascript</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container pt-4">
+        <table class="table table-hover table-bordered table-info">
+            <style>
+                .container-fluid {
+                    width: 80vw;
+                    height: 40vh;
+                    border: 1px groove black;
+                    border-radius: 20px;
+                }
+                #resultDiv{
+                    color:black;
+                    background-color: olive;
+                    font-weight: bolder;
+                    font-size : 30px;
+                }
+            </style>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Parentage</th>
+                    <th>Phone no</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <tr>
+                    <td scope="row">Asif</td>
+                    <td>Ab Rashid Mir</td>
+                    <td> 9622942394</td>
+                    <td><button data-name="Asif" data-parentage="ab Rashid Mir" data-phone="99888888888"
+                            class="btn btn-sm btn-primary">Get Details</button></td>
+                </tr>
+                <tr>
+                    <td scope="row">saheem </td>
+                    <td>Mohd Shafi Mir</td>
+                    <td>6006776995</td>
+                    <td><button data-name="saheem" data-parentage="mohd shafi mir" data-phone="543245799"
+                           class="btn btn-sm btn-primary">Get Details</button></td>
+                </tr>
+                <tr>
+                    <td scope="row">Hazim </td>
+                    <td>Hamid</td>
+                    <td>9898498948</td>
+                    <td><button data-name="Hazim" data-parentage="Hamid" data-phone="87878789999"
+                            class="btn btn-sm btn-primary">Get Details</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container-fluid   mt-5 pt-5 " id="resultDiv">
+
+    </div>
+
+    <script>
+
+        let resultDiv = document.getElementById("resultDiv");
+
+
+
+
+        document.getElementById("tbody").addEventListener("click", function (event) {
+
+            if (event.target.innerText == "Get Details") {
+
+                resultDiv.innerHTML = `name is : ${event.target.dataset.name}<br>
+                    parenntage is : ${event.target.dataset.parentage}<br>
+                    contactno is : ${event.target.dataset.phone}`;
+                    
+            }
+
+        
+        })
+
+
+    </script>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

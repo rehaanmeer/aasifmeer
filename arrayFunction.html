@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array function</title>
+</head>
+
+<body>
+    <script>
+        let evenNumbers = new Array(5);
+        let oddNumbers = new Array(5);
+        for (let index = 0; index < 5;) {
+            let num = parseInt(prompt("enter any number"));
+            if (num % 2 == 0) {
+                evenNumbers[index] = num;
+                index++;
+            }
+            else {
+                oddNumbers[index] = num;
+
+            }
+        }
+        // for (let j = 0; j < 5; j++) {
+        //     console.log(evenNumbers[j]);
+        //     console.log(oddNumbers[j]);
+
+        // }
+        console.log(evenNumbers);
+        console.log(oddNumbers);
+
+    </script>
+
+</body>
+
+</html>

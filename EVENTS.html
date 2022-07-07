@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS</title>
+ <style>
+    .container{
+        width: 50vw;
+        height: 30vh;
+        margin-left: 30px;
+        margin-top: 20px;
+        padding: 10px;
+        border: 2px inset gray;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px red;
+        /* background-image: linear-gradient(rgb(200,100,50)); */
+    }
+    #sourceDiv{
+                       margin-top: 200px;
+                        width: 500px;
+                        height: 250px;
+                        border: 1px solid gray;
+                }
+                .container input{
+                    width: 30vw;
+                    height: 20px;
+                    padding: 2px;
+                  margin: 10px;
+                  border: 1px solid blue;
+            
+                }
+                #btnCreate{
+                    margin: 30px;
+                    border: 2px solid green;
+                    width: 90px;
+                    height: 40px;
+                    margin-left: 250px;
+                    display: flex;
+                    justify-content:center;
+                    align-items:center;
+                }
+
+ </style>
+ 
+</head>
+
+<body>
+    <div class="container">
+        <form action="" id="form">
+            <div>
+                <label for="FirstName">FirstName</label>
+                <input type="text" name="first" id="FirstName">
+            </div>
+            <div>
+                <label for="LastName">LastName</label>
+                <input type="text" name="second" id="LastName">
+            </div>
+            <div>
+                <button id="btnCreate" type="submit">create</button>
+            </div>
+            <div id="resultDiv"></div>
+            <div id="sourceDiv"></div>
+        </form>
+    </div>
+    <script>
+        const btnCreate = document.getElementById("btnCreate");
+        let resutDiv = document.getElementById("resultDiv");
+        const form = document.getElementById("form");
+        form.addEventListener("change", function (event) {
+            // event.preventDefault();
+            console.log(`element is ${event.target.tagName} : with id ${event.target.id} : and value ${event.target.value}`);
+            // resultDiv.innerHTML=(`element is ${event.target.tagName} : with id ${event.target.id} : and value ${event.target.value}`);
+        });
+        document.getElementById("sourceDiv").addEventListener('mousemove',function(event){
+                        // resultDiv.innerHTML="X Cordinates "+event.clientX;
+                        // resultDiv.innerHTML+= "<br/> Y Cordinates"+event.clientY;
+                        sourceDiv.innerHTML="X Cordinates "+event.clientX;
+                        sourceDiv.innerHTML+= "<br/> Y Cordinates"+event.clientY;
+                });
+
+        btnCreate.addEventListener('click',  (event) => {
+
+            event.preventDefault();
+
+        });
+        form.addEventListener("submit",function(event){
+            event.preventDefault();
+        });
+    </script>
+</body>
+
+</html>

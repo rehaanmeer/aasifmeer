@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center my-5">
+        <form action="">
+            <div class="form-group mb-3">
+                <label for="firstNo" class="form-label"> Enter First Number</label>
+                <input type="number" class="form-control" id="firstNo" placeholder="Enter first number">
+            </div>
+            <div class="form-group mb-3">
+                <label for="secondNo" class="form-label"> Enter Second Number</label>
+                <input type="number" class="form-control" id="secondNo" placeholder="Enter second number">
+            </div>
+            <div class="form-group mb-3">
+
+                <label for="functionResult" class="form-label"> Final Result</label>
+                <input type="number" class="form-control" id="functionResult" placeholder="Result" disabled value="">
+            </div>
+            <input type="text" id="alerting" value="" class="form-control-plaintext text-danger"
+                style="margin-top: -10px;" disabled>
+            <div class="form-group mt-3">
+
+                <button class="btn btn-primary" type="button" onclick="add()">Addition</button>
+                <button class="btn btn-secondary" type="button" onclick="sub()">Subtraction</button>
+                <button class="btn btn-warning" type="button" onclick="mul()">Multiplication</button>
+                <button class="btn btn-danger" type="button" onclick="div()">Division</button>
+                <button class="btn btn-dark" type="button" onclick="mod()">Modulo</button>
+
+            </div>
+            <button class="btn btn-info mt-2 w-100" type="reset">Reset</button>
+            <div class="footer mt-5  btn-secondary p-2">
+ 
+                 &copy; Aasif meer  | All rights reserved
+        
+            </div>
+        </form>
+       
+
+    </div>
+    <script>
+        var firstNo = document.getElementById('firstNo');
+        var secondNo = document.getElementById('secondNo');
+        var functionResult = document.getElementById('functionResult');
+        var resultAlert = document.getElementById('alerting');
+        function add() {
+            var fnoValue = Number(firstNo.value);
+            var snoValue = Number(secondNo.value);
+            var finalResult = fnoValue + snoValue;
+
+            functionResult.value = (finalResult);
+            // alert(`the addition of two no's is `+finalResult)
+            alert(" u r going to perform addition")
+            resultAlert.value = ('The is the addition of two no.s');
+
+        }
+        function sub() {
+            var fnoValue = Number(firstNo.value);
+            var snoValue = Number(secondNo.value);
+            var finalResult = fnoValue - snoValue;
+            // alert(result);
+            functionResult.value = (finalResult);
+            alert(" u r going to perform subtracton")
+            resultAlert.value = ('This is subtraction of two numbers');
+
+        }
+        function mul() {
+            var fnoValue = Number(firstNo.value);
+            var snoValue = Number(secondNo.value);
+            var finalResult = fnoValue * snoValue;
+            // alert(result);
+            functionResult.value = (finalResult);
+            alert(" u r going to perform multiplication")
+            resultAlert.value = ('This is multiplication of two numbers');
+
+        }
+        function div() {
+            var fnoValue = Number(firstNo.value);
+            var snoValue = Number(secondNo.value);
+            var finalResult = fnoValue / snoValue;
+            // alert(result);
+            functionResult.value = (finalResult);
+            alert(" u r going to perform division")
+            resultAlert.value = ('This is divisionnof two numbers');
+
+        }
+        function mod() {
+            var fnoValue = Number(firstNo.value);
+            var snoValue = Number(secondNo.value);
+            var finalResult = fnoValue % snoValue;
+            // alert(result);
+            functionResult.value = (finalResult);
+            alert(" u r going to perform mod")
+            resultAlert.value = ('This is modulo of two numbers');
+
+        }
+    </script>
+</body>
+
+</html>

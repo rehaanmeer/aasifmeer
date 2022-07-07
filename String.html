@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="conatiner">
+        <div>
+            Please enter <input type="text" name="" id="txt" placeholder="please enter">
+        </div>
+        <div>
+            upload file <input type="file" name="" id="fileUpload">
+        </div>
+        <div>
+            <button type="button" id="btnUpload">Upload</button>
+        </div>
+    </div>
+    <script>
+
+        //String opearations
+
+        const str1 = "the aim of Education is to";
+        console.log(str1);
+
+        console.log(`the length of first string is ${str1.length}`);
+
+        const str2 = "ensure all round development";
+        console.log(str2);
+        console.log(`the length of second string is ${str2.length}`);
+
+        const str3 = "of child and draw out the best";
+        console.log(str3);
+        console.log(`the length of third string is ${str3.length}`);
+
+        const finalString = str1.concat(" ", str2, str3);
+        console.log(`the final string is ${finalString}`);
+        console.log(`the  final length is ${finalString.length}`);
+
+
+        const resultString = finalString.substring(10, 60);
+        console.log(`the substring from final string is ${resultString}`);
+
+        const upperCase = finalString.toUpperCase();
+        console.log(`final array in uppercase is ${upperCase}`);
+
+
+        // const stringJoin = arr.join("str2, str3");
+        // console.log(`the final string is ${stringJoin}`);
+        // console.log(`the  final length is ${stringJoin.length}`);
+
+        const replaceStr = str1.replace(/aim/gi, 'fame')
+        console.log(`the final string is ${replaceStr}`);
+        console.log(`the  final length is ${replaceStr.length}`);
+
+
+        const finalTrim=replaceStr.trim();
+        console.log(`The given space has been trimmed ${finalTrim}`);
+
+
+
+
+        document.getElementById("btnUpload").addEventListener('click', function () {
+            const fileUpload = document.getElementById("fileUpload");
+            let file = fileUpload.files[0];
+            let fileName = file.name;
+            let fileSize = file.size;
+            let fileType = file.type;
+
+            console.log(file);
+            console.log(fileName);
+            console.log(fileSize);
+            console.log(fileType);
+
+        });
+     
+
+    </script>
+</body>
+
+</html>

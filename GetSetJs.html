@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="btnAdd" class="mybtnclass">Add New Items
+
+    </button>
+
+    <ul id="myList" style="border:1px inset gold">
+
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+
+    </ul>
+
+    <script>
+
+        const btnAdd = document.getElementById("btnAdd");
+
+        const myList = document.getElementById("myList");
+
+        btnAdd.setAttribute("title", "welcome");
+        btnAdd.setAttribute("type", "reset");
+
+        let result = `id=${btnAdd.getAttribute("id")}
+                     and class=${btnAdd.getAttribute("class")}
+                        and title=${btnAdd.getAttribute("titile")}
+                           and type=${btnAdd.getAttribute("type")}`;
+
+        alert(result);
+
+        const myLis = document.getElementsByTagName('li');
+
+
+        btnAdd.addEventListener("click", function () {
+
+            myList.innerHTML += "<ul>new ul added </ul>";
+            
+
+            myList.innerHTML += "<li>new li added </li>";
+
+        });
+
+        myList.addEventListener("click", function (event) {
+
+            event.target.style.display = "none";
+
+        })
+
+    </script>
+</body>
+
+</html>

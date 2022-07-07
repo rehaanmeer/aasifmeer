@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Incremental Loop</title>
+    <style>
+        html {
+            font-size: 20px;
+            margin: 0px;
+            padding: 0px;
+            background-color: aqua;
+        }
+
+        form {
+            padding: 5rem;
+            /* background-color: aqua; */
+            height: 20vh;
+
+        }
+
+        .first input {
+            width: 50vw;
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .second input {
+            width: 50vw;
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <div class="first"> <label for="FirstNo"> Enter first No
+                <input type="text" name="FirstNo" id="FirstNo" value="" placeholder="Enter First No">
+            </label>
+        </div>
+        <div class="second"> <label for="SecondNo"> Enter second no.
+                <input type="text" name="SecondNo" id="SecondNo" value="" placeholder="Enter Second No">
+            </label>
+        </div>
+        <div>
+            <button class="button" type="button" onclick="start()">
+
+                View Result</button>
+        </div>
+    </form>
+    <script>
+        function start() {
+
+            var FirstNo = parseFloat(document.getElementById('FirstNo').value);
+            var SecondNo = parseFloat(document.getElementById('SecondNo').value);
+            if(FirstNo>=SecondNo)
+            console.log("u have entered wrong input" );
+            while (FirstNo <= SecondNo) {
+                console.log(FirstNo);
+                FirstNo++;
+            }
+        }
+    </script>
+</body>
+
+</html>

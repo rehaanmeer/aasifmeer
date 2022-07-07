@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myDiv {
+            display: table-cell;
+            border: 2px solid black;
+            width: 50vw;
+            padding: 64px;
+
+
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="grandparent" class="myDiv">
+
+        grand parent
+
+        <div id="parent" class="myDiv">
+
+            parent
+
+            <div id="child" class="myDiv">
+
+                child
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById('grandparent').addEventListener("click", function () {
+            this.style.backgroundColor = "wheat";
+            alert(`event bubbling through ${this.id}`);
+        })
+        document.getElementById('parent').addEventListener("click", function (event) {
+            this.style.backgroundColor = "grey";
+            alert(`event bubbling through ${this.id}`);
+            event.stopPropagation();
+            alert(`cant acess bcoz event is propagated`);
+        })
+        document.getElementById('child').addEventListener("click", function () {
+            this.style.backgroundColor = "skyblue";
+            alert(`event bubbling through ${this.id}`);
+        })
+    </script>
+</body>
+
+</html>

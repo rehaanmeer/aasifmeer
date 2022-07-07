@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <style>
+        input[type="file"] {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            border-radius: 30px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container pt-5 ps-5">
+        <div class="col-md-6 mt-5 ms-5">
+            <div class="h-100 p-5 bg-dark rounded-3">
+                <h2>File Operations</h2>
+                <p class="text-danger text-light para"></p>
+                <input type="file" name="file" id="file" class="form-control">
+                <button class="btn btn-outline-light mt-3" type="button">Upload File</button>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        document.querySelector('.btn').addEventListener('click', function (e) {
+
+            let files = document.querySelector('#file').files;
+            let para = document.querySelector('.para');
+
+            if (files.length > 0) {
+                let file = files[0];
+                let fileName = file.name;
+                let extension = fileName.substring(fileName.indexOf('.'))
+                let fileType = file.type;
+                let fileSize = file.size;
+
+
+                if (extension === '.png' || extension === '.jpg') {
+                    para.classList.add('text-success');
+                    para.classList.remove('text-danger', 'text-light');
+                    para.innerText = `Succesfully uploaded`;
+
+                    console.log(fileName, fileType, fileSize, extension);
+                }
+                else {
+                    para.classList.add('text-danger');
+                    para.classList.remove('text-success', 'text-light');
+                    para.innerText = `The file format ${extension} is not supported`;
+                }
+            }
+
+
+        })
+
+    </script>
+
+</body>
+
+</html>

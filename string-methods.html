@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body class="d-flex justify-content-center align-items-center w-100 h-100 flex-column">
+    <form action="" class="w-50">
+        <div class="form-group pt-5 w-50">
+            <input type="email" name="email" id="email" placeholder="Enter email" class="form-control form-control-sm" my-2>
+            <input type="url" name="url" id="url" placeholder="Enter url" class="form-control form-control-sm my-2">
+            <button type="button" class="btn btn-primary btn-sm my-2">Submit</button>
+        </div>
+    </form>
+   
+    <div class="container mt-5">
+        <h2 class="text-secondary">Url data</h2>
+        <table class="table table-responsive table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Protocol</th>
+                    <th>Server</th>
+                    <th>Port Number</th>
+                    <th>File</th>
+                    <th>Extension</th>
+                </tr>
+            </thead>
+            <tbody class="url-data">
+                <!-- <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr> -->
+            </tbody>
+        </table>
+
+    </div>
+    <div class="container mt-5">
+        <h2 class="text-secondary">Email data</h2>
+        <table class="table table-responsive table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Domain Name</th>
+                    <th>Domain</th>
+                </tr>
+            </thead>
+            <tbody class="email-data">
+                <!-- <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr> -->
+            </tbody>
+        </table>
+
+    </div>
+
+    <script>
+
+
+        document.querySelector('.btn').addEventListener('click', function (e) {
+
+            let email = document.querySelector('#email').value;
+            let url = document.querySelector('#url').value;
+
+            //  email part
+            let emailName = email.substring(0, email.indexOf('@'));
+            let emailDomainName = email.substring(email.indexOf('@') + 1, email.lastIndexOf('.'));
+            let emailDomain = email.substring(email.indexOf('.'));
+            document.querySelector('.email-data').innerHTML += `<tr>
+                                                                    <td>${emailName}</td>
+                                                                    <td>${emailDomainName}</td>
+                                                                    <td>${emailDomain}</td>
+                                                                </tr>`
+
+            //  url part
+            let protocol = url.substring(0, url.indexOf(":"));
+            let server = url.substring(url.indexOf('/') + 2, url.lastIndexOf(':'));
+            let port = url.substring(url.lastIndexOf(':') + 1, url.lastIndexOf('/'));
+            let file = url.substring(url.lastIndexOf('/') + 1, url.lastIndexOf('.'));
+            let extension = url.substring(url.lastIndexOf('.'));
+
+            document.querySelector('.url-data').innerHTML += ` <tr>
+                                                                <td>${protocol}</td>
+                                                                <td>${server}</td>
+                                                                <td>${port}</td>
+                                                                <td>${file}</td>
+                                                                <td>${extension}</td>
+                                                            </tr>`
+
+            //  tests
+            // console.log(protocol);
+            // console.log(server);
+            // console.log(port);
+            // console.log(file);
+            // console.log(extension);
+
+        })
+    </script>
+</body>
+
+
+
+</html>
